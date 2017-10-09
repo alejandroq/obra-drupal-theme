@@ -26,6 +26,5 @@ polymer build
 ```
 ## Demo
 ### Dependencies
-- [Docker](http://docker.io/)
-- [Docksal](https://docksal.readthedocs.io/en/master/)
-- [Composer](https://getcomposer.org/)
+- [Docksal](https://docksal.readthedocs.io/en/master/) (helper for [Docker](http://docker.io/))
+- [Drupal Composer](https://github.com/drupal-composer/drupal-project)  (helper for [Composer](https://getcomposer.org/))
