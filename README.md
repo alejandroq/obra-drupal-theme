@@ -28,3 +28,6 @@ polymer build
 ### Dependencies
 - [Docksal](https://docksal.readthedocs.io/en/master/) (helper for [Docker](http://docker.io/))
 - [Drupal Composer](https://github.com/drupal-composer/drupal-project)  (helper for [Composer](https://getcomposer.org/))
+
+<!-- setup demo drupal application, provide phpunit testing base, TravisCI (run, npm test if there are scripts, etc) --> 
+<!-- do not add extra cruft. people just need clear instrucitons how to setup theme locally. --> 
