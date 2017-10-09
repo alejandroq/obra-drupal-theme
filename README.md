@@ -16,8 +16,9 @@ Polymer itself is syntatical sugar over W3C Web Components that especially lever
 This upcoming browser feature (already a part of Chrome and polyfills exist for other browsers), allows for style encapsulation, events, etc. Polymer, unlike other Javascript frameworks/libraries, is quite close to the browser platform allowing it's implementations be agnostic of orchestration layers. 
 
 ## Installing Development Dependencies
-Prerequisites: [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/en/), [bower](https://bower.io/)
-and [polymer-cli](https://www.polymer-project.org/2.0/docs/tools/polymer-cli).
+- [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/en/)
+- [Bower](https://bower.io/)
+- [Polymer CLI](https://www.polymer-project.org/2.0/docs/tools/polymer-cli).
 
 ## Build Polymer Assets
 ```sh
