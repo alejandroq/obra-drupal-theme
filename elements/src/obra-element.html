@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="obra-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+        height: 50px;
+        background-color: red;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `obra-element`
+     * test
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ObraElement extends Polymer.Element {
+      static get is() { return 'obra-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'obra-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(ObraElement.is, ObraElement);
+  </script>
+</dom-module>

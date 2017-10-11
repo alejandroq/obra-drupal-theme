@@ -1,0 +1,9 @@
+name: Obra Theme
+type: theme
+description: A Polymer starting point for new Drupal 8 themes.
+package: Obra
+core: 8.x
+libraries:
+  - obra_theme/polymer-js
+
+base theme: stable

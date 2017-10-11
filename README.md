@@ -5,7 +5,7 @@ A Polymer starting point for new Drupal 8 themes.
 Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser compatitability that is easily extensible by users. The theme will update overtime to accomodate browser maturity (HTTP2 Server Push, PWA, etc). 
 
 ## Goals
-- [ ] Polymer
+- [ ] Polymer 
 - [ ] Cross-browser compatibility
 - [ ] PWA shell out of the box
 - [ ] Instruction and compatibility with Twig
@@ -24,6 +24,10 @@ This upcoming browser feature (already a part of Chrome and polyfills exist for 
 ```sh
 polymer build
 ```
+
+## How to Develop
+[https://www.drupal.org/docs/8/theming/twig/debugging-twig-templates](https://www.drupal.org/docs/8/theming/twig/debugging-twig-templates)
+
 ## Demo
 ### Dependencies
 - [Docksal](https://docksal.readthedocs.io/en/master/) (helper for [Docker](http://docker.io/))

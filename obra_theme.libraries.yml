@@ -1,0 +1,5 @@
+polymer-js:
+  version: 1.0
+  js:
+    elements/build/es5-bundled/bower_components/webcomponentsjs/custom-elements-es5-adapter.js: {}
+    elements/build/es5-bundled/bower_components/webcomponentsjs/webcomponents-lite.js: {}
