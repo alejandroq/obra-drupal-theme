@@ -6,11 +6,11 @@ Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser comp
 
 ## Goals
 - [ ] Polymer
-  - [ X ] Setup Basic WebComponents.org elements
+  - [X] Setup Basic WebComponents.org elements
   - [ ] Setup custom bundled elements interoperability
 - [ ] Verify cross-browser compatibility (perhaps with Sauce Labs, etc)
 - [ ] Twig-related
-  - [ X ] Interoperable, thus Web Components are orchestrated by Twig
+  - [X] Interoperable, thus Web Components are orchestrated by Twig
   - [ ] Document basic use case
 - [ ] Theme-related
   - [ ] Base Theme (extends core/stable)
