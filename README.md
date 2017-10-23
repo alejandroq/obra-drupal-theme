@@ -8,7 +8,6 @@ Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser comp
 - [ ] Polymer
   - [X] Setup Basic WebComponents.org elements
   - [ ] Setup custom bundled elements interoperability
-- [ ] Pure Web Component example (no Polymer - for option?)
 - [ ] Verify cross-browser compatibility (perhaps with Sauce Labs, etc)
 - [ ] Twig-related
   - [X] Interoperable, thus Web Components are orchestrated by Twig
@@ -20,6 +19,7 @@ Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser comp
 ## Stretch Goals
 - [ ] PWA shell out of the box
 - [ ] CI/CD options for custom Polymer Elements
+- [ ] Pure Web Component example (no Polymer - for option?)
 
 ## Why Polymer?
 Polymer itself is syntatical sugar over W3C Web Components that especially leverages Shadow DOM. 
