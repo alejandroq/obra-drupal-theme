@@ -19,6 +19,7 @@ Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser comp
 
 ## Stretch Goals
 - [ ] PWA shell out of the box
+- [ ] CI/CD options for custom Polymer Elements
 
 ## Why Polymer?
 Polymer itself is syntatical sugar over W3C Web Components that especially leverages Shadow DOM. 
