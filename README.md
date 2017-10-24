@@ -4,25 +4,40 @@ A Polymer starting point for new Drupal 8 themes.
 ## Mission Statement
 Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser compatitability that is easily extensible by users. The theme will update overtime to accomodate browser maturity (HTTP2 Server Push, PWA, etc). 
 
+## tl;dr
+Check out the [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo).
+If you have Docksal installed. Run the following CLI commands to setup the Theme Demo in a new Drupal 8 instance:
+```bash
+$ git clone https://github.com/alejandroq/obra-drupal-demo.git;
+$ cd obra-drupal-demo;
+$ fin init
+
+# You now have a containerized Apache 2.4 Virtual Hosting obradrupaldemo.docksal
+# **Pay attention to stdout as your randomly generated admin Username and Password will be near the bottom.**
+```
+
 ## Goals
 - [ ] Polymer
   - [X] Setup Basic WebComponents.org elements
   - [ ] Setup custom bundled elements interoperability
 - [ ] Pure Web Component example (no Polymer - for option?)
-- [ ] Verify cross-browser compatibility (perhaps with Sauce Labs, etc)
 - [ ] Twig-related
   - [X] Interoperable, thus Web Components are orchestrated by Twig
-  - [ ] Document basic use case
+  - [ ] Document basic use case. Foudn here: [TerraIncognita: Polymer in Drupal 8](http://terraincognita-website-dev.s3-website-us-east-1.amazonaws.com/polymer-drupal-8/)
 - [ ] Theme-related
   - [ ] Base Theme (extends core/stable)
   - [ ] Demo Theme (extends obra_theme + app-layout WebComponent)
 
 ## Stretch Goals
-- [ ] PWA shell out of the box
+- [ ] PWA Shell out of the Box
+- [ ] TravisCI for PolymerElement Testing
+
 
 ## Why Polymer?
-Polymer itself is syntatical sugar over W3C Web Components that especially leverages Shadow DOM. 
-This upcoming browser feature (already a part of Chrome and polyfills exist for other browsers), allows for style encapsulation, events, etc. Polymer, unlike other Javascript frameworks/libraries, is quite close to the browser platform allowing it's implementations be agnostic of orchestration layers. 
+Polymer itself is syntatical sugar over W3C Web Components that especially leverages modern browser features such as: Shadow DOM, HTTP2 Push, etc. 
+The Shadow DOM browser feature (already a part of Chrome; with polyfills existing for other browsers), allows for style encapsulation, events, etc. 
+Polymer, unlike other Javascript frameworks/libraries, is quite close to the browser platform allowing it's implementations be agnostic of orchestration layers. 
+Checkout the official Element Catalog (less robust than a Kithen Sink) at [WebComponents.org](https://www.webcomponents.org/).
 
 ## Installing Development Dependencies
 - [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/en/)
@@ -101,11 +116,3 @@ Example below:
 <!-- END OUTPUT from 'core/themes/stable/templates/block/block--system-menu-block.html.twig' -->
 </div>
 ```   
-
-## Demo
-### Dependencies
-- [Docksal](https://docksal.readthedocs.io/en/master/) (helper for [Docker](http://docker.io/))
-- [Drupal Composer](https://github.com/drupal-composer/drupal-project)  (helper for [Composer](https://getcomposer.org/))
-
-<!-- setup demo drupal application, provide phpunit testing base, TravisCI (run, npm test if there are scripts, etc) ? --> 
-<!-- do not add extra cruft. people just need clear instrucitons how to setup theme locally. Base is bare, Demo is possible starting point --> 

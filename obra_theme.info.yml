@@ -7,3 +7,8 @@ libraries:
   - obra_theme/polymer-js
 
 base theme: stable
+regions:
+  menu: 'Menu'
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'

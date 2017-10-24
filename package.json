@@ -1,0 +1,17 @@
+{
+  "name": "obra_theme",
+  "version": "1.0.0",
+  "description": "A Polymer starting point for new Drupal 8 themes.",
+  "main": "index.js",
+  "repository": "https://github.com/alejandroq/obra-drupal-theme.git",
+  "author": "alejandroquesada <quesadaaba@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "install": "./node_modules/bower/bin/bower install",
+    "postinstall": ""
+  },
+  "devDependencies": {
+    "bower": "^1.8.2",
+    "polymer-cli": "^1.5.7"
+  }
+}
