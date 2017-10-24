@@ -19,18 +19,15 @@ $ fin init
 ## Goals
 - [ ] Polymer
   - [X] Setup Basic WebComponents.org elements
-  - [ ] Setup custom bundled elements interoperability
-- [ ] Pure Web Component example (no Polymer - for option?)
-- [ ] Twig-related
+  - [ ] Setup Custom Bundled Elements Interoperability
+- [ ] Twig Orchestration
   - [X] Interoperable, thus Web Components are orchestrated by Twig
   - [ ] Document basic use case. Foudn here: [TerraIncognita: Polymer in Drupal 8](http://terraincognita-website-dev.s3-website-us-east-1.amazonaws.com/polymer-drupal-8/)
-- [ ] Theme-related
-  - [ ] Base Theme (extends core/stable)
-  - [ ] Demo Theme (extends obra_theme + app-layout WebComponent)
+- [X] [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo)
 
 ## Stretch Goals
 - [ ] PWA Shell out of the Box
-- [ ] TravisCI for PolymerElement Testing
+- [ ] Custom Polymer Elements CI/CD example (TravisCI?)
 
 
 ## Why Polymer?
