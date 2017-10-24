@@ -51,7 +51,7 @@ First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polyme
 ### Viewing Your Element(s)
 
 ```
-ROOT     $ cd elements  
+ROOT     $ cd elements   
 elements $ polymer serve
 ```
 
