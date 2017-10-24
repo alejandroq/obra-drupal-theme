@@ -5,7 +5,7 @@ A Polymer starting point for new Drupal 8 themes.
 Provide a baseline Drupal 8 theme that leverages Polymer with cross-browser compatitability that is easily extensible by users. The theme will update overtime to accomodate browser maturity (HTTP2 Server Push, PWA, etc). 
 
 ## tl;dr
-Check out the [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo).
+Check out the [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo#cut-to-the-chase).
 If you have Docksal installed. Run the following CLI commands to setup the Theme Demo in a new Drupal 8 instance:
 ```bash
 $ git clone https://github.com/alejandroq/obra-drupal-demo.git;
