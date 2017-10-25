@@ -26,22 +26,10 @@
  */
 #}
 <div{{ attributes }}>
-  {#{{ title_prefix }}#}
-  {#{% if label %}#}
-    {#<h2{{ title_attributes }}>{{ label }}</h2>#}
-  {#{% endif %}#}
-  {#{{ title_suffix }}#}
-  {#{% block content %}#}
-    {#{{ content }}#}
-  {#{% endblock %}#}
-  {# TODO proof it worked. #}
-  <paper-input label="username">
-    <iron-icon icon="mail" slot="prefix"></iron-icon>
-    <div slot="suffix">@email.com</div>
-  </paper-input>
-  {# TODO fix why this no build and work right #}
-  <obra-element prop1="ALEJANDRO"></obra-element>
-  <google-map
-    style="height: 500px; display:block"
-    api-key="AIzaSyDsjtNZYsnNVcqHtuDC-3jECdu4rCaF_8c"></google-map>
+  {% if label %}
+    <h4{{ title_attributes }}>{{ label }}</h4>
+  {% endif %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
 </div>

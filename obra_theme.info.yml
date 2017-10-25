@@ -4,10 +4,12 @@ description: A Polymer starting point for new Drupal 8 themes.
 package: Obra
 core: 8.x
 libraries:
+  - obra_theme/obra-css
   - obra_theme/polymer-js
 
 base theme: stable
 regions:
+  branding: 'Branding'
   menu: 'Menu'
   header: 'Header'
   subheader: 'Sub Header'

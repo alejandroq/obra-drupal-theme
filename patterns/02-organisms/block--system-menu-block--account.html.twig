@@ -47,17 +47,4 @@
   {{ title_prefix }}
   <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
   {{ title_suffix }}
-
-  {# Menu. #}
-  <app-header reveals>
-    <app-toolbar>
-      <paper-icon-button icon="menu" onclick="drawer2.toggle()"></paper-icon-button>
-      <div main-title>Obra Theme</div>
-    </app-toolbar>
-  </app-header>
-  <app-drawer id="drawer2" style="z-index: 9999" swipe-open>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </app-drawer>
 </nav>

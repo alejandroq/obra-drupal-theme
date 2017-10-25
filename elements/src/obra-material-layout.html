@@ -1,0 +1,130 @@
+<link rel="import" href="../../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../../../../bower_components/paper-styles/color.html">
+<link rel="import" href="../../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<dom-module id="obra-material-layout">
+  <template>
+
+    <style>
+      :host {
+        display: block;
+      }
+
+      app-header {
+        background-color: var(--app-primary-color);
+        color: white;
+      }
+
+      app-toolbar {
+        background-color: var(--paper-indigo-300, pink);
+        box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+        --app-drawer-content-container: {
+          padding: 2em;
+          background-color: #eee;
+        }
+      }
+
+      app-drawer {
+        z-index: 9999;
+      }
+
+      [main-title] {
+        margin-left: 24px;
+      }
+
+      section, footer, aside {
+        display: block;
+        position: relative;
+        max-width: 1024px;
+        margin: 5px auto;
+        padding: 1em 3em 1em 3em;
+      }
+
+      .admin-padding {
+        padding-top: 2.4rem;
+      }
+
+      @media (max-width: 600px) {
+        app-toolbar {
+          height: 56px;
+          padding: 0 8px;
+        }
+      }
+
+      ::slotted(.drawer) {
+        padding:1em;
+        padding-top: 2.3em;
+      }
+
+      hr {
+        color: var(--paper-indigo-100, lightpink);
+        max-width: 1050px;
+      }
+    </style>
+
+    <app-header-layout fullbleed>
+      <app-header shadow reveals>
+        <app-toolbar class$="{{_isAdminClass(admin)}}">
+          <paper-icon-button
+            icon="menu"
+            on-click="toggleDrawer"></paper-icon-button>
+          <div slot="branding"></div>
+          <div id="title" main-title>[[title]]</div>
+          <paper-icon-button icon="search"></paper-icon-button>
+        </app-toolbar>
+
+      </app-header>
+
+      <app-drawer-layout>
+        <app-drawer id="drawer" swipe-open>
+          <slot name="drawer"></slot>
+          <slot>
+            <div class="drawer">
+              <p>Default Content</p>
+            </div>
+          </slot>
+        </app-drawer>
+
+        <section>
+          <slot name="content"></slot>
+        </section>
+
+        <aside>
+          <slot name="aside"></slot>
+        </aside>
+
+        <hr>
+
+        <footer>
+          <slot name="footer" class="footer"></slot>
+        </footer>
+      </app-drawer-layout>
+    </app-header-layout>
+
+  </template>
+
+  <script>
+    class ObraMaterialLayout extends Polymer.Element {
+      static get is() { return 'obra-material-layout'}
+      toggleDrawer() { this.shadowRoot.querySelector('#drawer').toggle() }
+      _isAdminClass(isAdmin) {
+        return (isAdmin) ? 'admin-padding' : '';
+      }
+      static get properties() {
+        return {
+          title: {
+            type: String,
+            value: "Best Title"
+          },
+          admin: {
+            type: Boolean,
+            value: false
+          }
+        }
+      }
+    }
+    customElements.define(ObraMaterialLayout.is, ObraMaterialLayout);
+  </script>
+</dom-module>

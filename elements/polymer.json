@@ -2,29 +2,10 @@
   "entrypoint": "index.html",
   "fragments": [],
   "sources": [
-    "src/*",
+    "src/**",
     "index.html"
   ],
-  "extraDependencies": [
-    "bower_components/webcomponentsjs/*.js"
-  ],
   "builds": [
-    {
-      "name": "es5-bundled",
-      "js": {
-        "minify": true,
-        "compile": true
-      },
-      "css": {
-        "minify": true
-      },
-      "html": {
-        "minify": true
-      },
-      "bundle": false,
-      "addServiceWorker": true,
-      "addPushManifest": false
-    },
     {
       "name": "es6-unbundled",
       "browserCapabilities": [

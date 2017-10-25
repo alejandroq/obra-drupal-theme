@@ -4,36 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>obra-element test</title>
+    <title>obra-material-layout test</title>
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../src/obra-element.html">
+    <link rel="import" href="../src/obra-material-layout.html">
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <obra-element></obra-element>
+        <obra-material-layout></obra-material-layout>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <obra-element prop1="new-prop1"></obra-element>
+        <obra-material-layout prop1="new-prop1"></obra-material-layout>
       </template>
     </test-fixture>
 
     <script>
-      suite('obra-element', () => {
+      suite('obra-material-layout', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'obra-element');
+          assert.equal(element.prop1, 'obra-material-layout');
           const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello obra-element!');
+          const elementHeader = elementShadowRoot.querySelector('#title');
+          assert.equal(elementHeader.innerHTML, 'Best Title');
         });
 
         test('setting a property on the element works', () => {
@@ -41,8 +41,8 @@
           const element = fixture('ChangedPropertyTestFixture');
           assert.equal(element.prop1, 'new-prop1');
           const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
+          const elementHeader = elementShadowRoot.querySelector('#title');
+          assert.equal(elementHeader.innerHTML, 'new-prop1');
         });
 
       });

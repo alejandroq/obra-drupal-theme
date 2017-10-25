@@ -45,54 +45,58 @@
 #}
 <div class="layout-container">
 
-  {#<header role="banner">#}
-    {#{{ page.header }}#}
-  {#</header>#}
 
-  <app-header reveals>
-    <app-toolbar>
-      <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
-      {{ page.header }}
-    </app-toolbar>
-    <app-drawer id="obra-theme-drawer" swipe-open>
-      {{ page.menu }}
-    </app-drawer>
-  </app-header>
+  {#<app-header reveals>#}
+    {#<header role="banner">#}
+      {#{{ page.header }}#}
+    {#</header>#}
+    {#<app-toolbar>#}
+      {#<paper-icon-button icon="menu" onclick="obra_theme_drawer.toggle()"></paper-icon-button>#}
+      {#{{ page.subheader }}#}
+    {#</app-toolbar>#}
+    {#<app-drawer id="obra_theme_drawer" swipe-open>#}
+      {#{{ page.menu }}#}
+    {#</app-drawer>#}
+  {#</app-header>#}
 
-  {#{{ page.primary_menu }}#}
-  {#{{ page.secondary_menu }}#}
-
-  {#{{ page.breadcrumb }}#}
-
-  {#{{ page.highlighted }}#}
-
-  {#{{ page.help }}#}
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
+  <obra-material-layout title="Obra Theme" admin="{{ is_admin }}">
+    {% if page.branding %}
+      <div slot="branding">{{ page.branding }}</div>
     {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
+    {% if page.subheader %}
+      <div slot="subheader">{{ page.subheader }}</div>
     {% endif %}
 
-  </main>
+    {% if page.menu %}
+      <div slot="drawer" class="drawer">{{ page.menu }}</div>
+    {% endif %}
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+    <main role="main" slot="content">
+      <a id="main-content" tabindex="-1"></a> {# /. link is in html.html.twig #}
+
+      <div class="layout-content">
+        {#<google-map#}
+          {#style="height: 500px; display:block"#}
+          {#api-key="AIzaSyDsjtNZYsnNVcqHtuDC-3jECdu4rCaF_8c"></google-map>#}
+        {% if page.content %}
+          {{ page.content }}
+        {% endif %}
+      </div>
+
+      {{ page.aside }}
+      {% if page.aside %}
+        <aside class="layout-sidebar-aside" role="complementary" slot="aside">
+          {{ page.aside }}
+        </aside>
+      {% endif %}
+    </main>
+
+    {% if page.footer %}
+      <footer class="footer" role="contentinfo" slot="footer">
+        {{ page.footer }}
+      </footer>
+    {% endif %}
+  </obra-material-layout>
 
 </div>{# /.layout-container #}
