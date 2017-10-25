@@ -19,7 +19,8 @@ $ fin init
 ## Goals
 - [ ] Polymer
   - [X] Setup Basic WebComponents.org elements
-  - [ ] Setup Custom Bundled Elements Interoperability
+  - [X] Setup Custom Bundled Elements Interoperability
+  - [ ] Setup Polymer Build's account of Bower_Components to allow for proper tooling by Serve and Lint
 - [ ] Twig Orchestration
   - [X] Interoperable, thus Web Components are orchestrated by Twig
   - [ ] Document basic use case. Foudn here: [TerraIncognita: Polymer in Drupal 8](http://terraincognita-website-dev.s3-website-us-east-1.amazonaws.com/polymer-drupal-8/)

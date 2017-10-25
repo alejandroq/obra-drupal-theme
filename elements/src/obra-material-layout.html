@@ -1,8 +1,10 @@
-<link rel="import" href="../../../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../../../bower_components/app-layout/app-layout.html">
-<link rel="import" href="../../../../bower_components/paper-styles/color.html">
-<link rel="import" href="../../../../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../../../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="obra-list-ajax.html">
+<link rel="import" href="obra-material-footer.html">
 
 <dom-module id="obra-material-layout">
   <template>
@@ -26,15 +28,21 @@
         }
       }
 
-      app-drawer {
-        z-index: 9999;
+      section {
+        @apply --layout-flex;
       }
 
-      [main-title] {
+      [main-title], #title {
         margin-left: 24px;
       }
 
-      section, footer, aside {
+      a, a:hover, a:visited {
+        color:white;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      section, aside {
         display: block;
         position: relative;
         max-width: 1024px;
@@ -57,11 +65,6 @@
         padding:1em;
         padding-top: 2.3em;
       }
-
-      hr {
-        color: var(--paper-indigo-100, lightpink);
-        max-width: 1050px;
-      }
     </style>
 
     <app-header-layout fullbleed>
@@ -70,11 +73,14 @@
           <paper-icon-button
             icon="menu"
             on-click="toggleDrawer"></paper-icon-button>
-          <div slot="branding"></div>
-          <div id="title" main-title>[[title]]</div>
-          <paper-icon-button icon="search"></paper-icon-button>
+          <a href="/">
+            <div id="title">
+              [[title]]
+            </div>
+          </a>
+          <div main-title></div>
+          <!--<paper-icon-button icon="search"></paper-icon-button>-->
         </app-toolbar>
-
       </app-header>
 
       <app-drawer-layout>
@@ -92,14 +98,16 @@
         </section>
 
         <aside>
+          <div style="background:red">
+            <p>here is should be</p>
+            <obra-list-ajax></obra-list-ajax>
+          </div>
           <slot name="aside"></slot>
         </aside>
 
-        <hr>
-
-        <footer>
-          <slot name="footer" class="footer"></slot>
-        </footer>
+        <obra-material-footer>
+          <slot name="footer" slot="footer" class="footer"></slot>
+        </obra-material-footer>
       </app-drawer-layout>
     </app-header-layout>
 

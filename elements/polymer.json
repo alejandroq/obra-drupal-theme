@@ -5,6 +5,8 @@
     "src/**",
     "index.html"
   ],
+  "extraDependencies": [
+  ],
   "builds": [
     {
       "name": "es6-unbundled",

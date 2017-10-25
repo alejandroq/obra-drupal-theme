@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+
+<dom-module id="obra-material-footer">
+  <template>
+    <style>
+      :host {
+        padding: 2em 3em;
+        display:block;
+        text-align: center;
+        background-color: var(--paper-indigo-50, lightpink);
+      }
+
+      :host ::slotted(*) {
+        padding: 0;
+        list-style:none;
+      }
+    </style>
+
+    <footer>
+      <slot name="footer" class="footer"></slot>
+    </footer>
+
+  </template>
+  <script>
+    class ObraMaterialFooter extends Polymer.Element {
+      static get is() { return 'obra-material-footer'}
+    }
+    customElements.define(ObraMaterialFooter.is, ObraMaterialFooter);
+  </script>
+</dom-module>
