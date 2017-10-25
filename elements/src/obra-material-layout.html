@@ -1,8 +1,8 @@
-<link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../bower_components/app-layout/app-layout.html">
-<link rel="import" href="../../bower_components/paper-styles/color.html">
-<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../../../bower_components/paper-styles/color.html">
+<link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="obra-list-ajax.html">
 <link rel="import" href="obra-material-footer.html">
 
@@ -26,10 +26,6 @@
           padding: 2em;
           background-color: #eee;
         }
-      }
-
-      section {
-        @apply --layout-flex;
       }
 
       [main-title], #title {
@@ -79,7 +75,7 @@
             </div>
           </a>
           <div main-title></div>
-          <!--<paper-icon-button icon="search"></paper-icon-button>-->
+          <paper-icon-button icon="search"></paper-icon-button>
         </app-toolbar>
       </app-header>
 
@@ -93,24 +89,22 @@
           </slot>
         </app-drawer>
 
-        <section>
-          <slot name="content"></slot>
-        </section>
+        <div>
+          <section>
+            <slot name="content"></slot>
+            <obra-list-ajax get=""></obra-list-ajax>
+          </section>
 
-        <aside>
-          <div style="background:red">
-            <p>here is should be</p>
-            <obra-list-ajax></obra-list-ajax>
-          </div>
-          <slot name="aside"></slot>
-        </aside>
+          <aside>
+            <slot name="aside"></slot>
+          </aside>
 
-        <obra-material-footer>
-          <slot name="footer" slot="footer" class="footer"></slot>
-        </obra-material-footer>
+          <obra-material-footer>
+            <slot name="footer" slot="footer" class="footer"></slot>
+          </obra-material-footer>
+        </div>
       </app-drawer-layout>
     </app-header-layout>
-
   </template>
 
   <script>
