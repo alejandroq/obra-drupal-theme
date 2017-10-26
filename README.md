@@ -17,19 +17,22 @@ $ fin init
 ```
 
 ## Goals
-- [ ] Polymer
+- [X] Polymer
   - [X] Setup Basic WebComponents.org elements
   - [X] Setup Custom Bundled Elements Interoperability
-  - [ ] Setup Polymer Build's account of Bower_Components to allow for proper tooling by Serve and Lint
-- [ ] Twig Orchestration
+- [X] Twig Orchestration
   - [X] Interoperable, thus Web Components are orchestrated by Twig
-  - [ ] Document basic use case. Foudn here: [TerraIncognita: Polymer in Drupal 8](http://terraincognita-website-dev.s3-website-us-east-1.amazonaws.com/polymer-drupal-8/)
+  - [X] Document basic use case. Found here: [TerraIncognita: Polymer in Drupal 8](http://terraincognita-website-dev.s3-website-us-east-1.amazonaws.com/polymer-drupal-8#cut-to-the-chase)
 - [X] [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo)
 
 ## Stretch Goals
 - [ ] PWA Shell out of the Box
 - [ ] Custom Polymer Elements CI/CD example (TravisCI?)
 
+## Known Issues
+- [ ] Initial Block placement is off. Automated configuration management will have to be introduced to place on install accordingly. This problem cascades to the [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo). 
+- [ ] App-Layout drawer is buggy. This intial implementation is early.
+- [ ] Polymer CLI script should account for bower_components delta to actual source via extraDependencies. This will fix the lint and testing issues. 
 
 ## Why Polymer?
 Polymer itself is syntatical sugar over W3C Web Components that especially leverages modern browser features such as: Shadow DOM, HTTP2 Push, etc. 
