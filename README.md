@@ -29,6 +29,7 @@ $ fin init
 - [ ] PWA Shell out of the Box
 - [ ] Custom Polymer Elements CI/CD example (TravisCI?)
 
+<a name="known-issues"></a>
 ## Known Issues
 - [ ] Initial Block placement is off. Automated configuration management will have to be introduced to place on install accordingly. This problem cascades to the [Obra Theme Demo](https://github.com/alejandroq/obra-drupal-demo). 
 - [ ] App-Layout drawer is buggy. This intial implementation is early.
